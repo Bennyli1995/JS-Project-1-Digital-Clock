@@ -1,0 +1,104 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background: url(./images/nature1.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+h2 {
+  margin-left: -5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8vh;
+  text-transform: uppercase;
+  color: rgb(52, 5, 5);
+  font-size: xx-large;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  gap: 15vh;
+}
+
+.hour-container,
+.minute-container,
+.second-container,
+.ampm-container {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ampm-container {
+  margin-top: 25vh;
+  padding: 10px;
+  height: 5%;
+  background: green;
+  color: white;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: white;
+  background: rgb(82, 73, 9);
+  height: 30vh;
+  width: 10vh;
+  color: white;
+  font-size: 400;
+  border-radius: 10%;
+}
+
+p {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  padding: 20px;
+  background: lawngreen;
+  border-radius: 10%;
+  color: black;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* CSS styles for iPhone SE */
+  .grid {
+    margin-left: 7%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+  }
+
+  h2 {
+    margin-top: 10%;
+    text-decoration: wavy;
+  }
+
+  .ampm-container {
+    margin-top: -120%;
+    margin-left: 115%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .grid {
+    margin-left: 7%;
+    gap: 8%;
+  }
+
+  .ampm-container {
+    margin-left: 50%;
+    margin-bottom: 20%;
+  }
+}
